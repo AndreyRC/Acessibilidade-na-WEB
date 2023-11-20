@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem-Vindo à Acessibilidade</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    nav {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 0.5em 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1em;
+    }
+
+    main {
+      padding: 2em;
+      margin-bottom: 2em;
+    }
+
+    section {
+      margin-bottom: 2em;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .font-controls {
+      text-align: right;
+      margin-bottom: 1em;
+    }
+
+    .font-controls button {
+      font-size: 1em;
+      margin-left: 0.5em;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 0.5em;
+      border-radius: 4px;
+    }
+
+    .footer-text {
+      font-size: 1em;
+      transition: font-size 0.3s;
+    }
+    nav a.pagina-atual {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 0.5em 1em;
+      border-radius: 4px;
+    }
+  </style>
+  <script>
+
+    let tamanhoFontePadrao = 1;
+
+    function aumentarFonte() {
+      if (tamanhoFontePadrao < 3) {
+        tamanhoFontePadrao += 0.2;
+        document.body.style.fontSize = tamanhoFontePadrao + "em";
+        document.querySelector('.footer-text').style.fontSize = '1em';
+      }
+    }
+
+    function diminuirFonte() {
+      if (tamanhoFontePadrao > 1) {
+        tamanhoFontePadrao -= 0.2;
+        document.body.style.fontSize = tamanhoFontePadrao + "em";
+        document.querySelector('.footer-text').style.fontSize = '1em';
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Bem-Vindo à Acessibilidade na WEB</h1>
+    <p>Construindo um mundo online inclusivo para todos.</p>
+  </header>
+
+  <nav>
+    <a href="historias.html">Histórias Inspiradoras</a>
+    <a href="index.html"class="pagina-atual">Página Inicial</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="diretrizes.html">Diretrizes</a>
+    <a href="glossario.html">Glossário de Termos</a>
+    
+
+  </nav>
+
+  <main>
+
+    <div class="font-controls">
+      <button onclick="aumentarFonte()">Aumentar Fonte</button>
+      <button onclick="diminuirFonte()">Diminuir Fonte</button>
+    </div>
+
+    <section>
+      <h2>O Que Você Encontrará Aqui</h2>
+      <p>Explore recursos práticos, histórias inspiradoras e informações cruciais sobre acessibilidade na web. Descubra como tornar a internet acessível para todos.</p>
+    </section>
+
+    <section>
+      <h2>Propósito do Site</h2>
+      <p>Estamos aqui para informar, educar e inspirar. Nosso objetivo é promover a conscientização sobre a acessibilidade na web, fornecendo recursos valiosos para desenvolvedores, designers e usuários finais.</p>
+    </section>
+
+    <section>
+      <h2>Compromisso com a Acessibilidade</h2>
+      <p>Comprometemo-nos a seguir as Diretrizes de Acessibilidade para Conteúdo da Web (WCAG) e a adotar as melhores práticas de design e desenvolvimento. Acreditamos que a acessibilidade é um direito fundamental de todos os usuários da internet.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>PUCPR - Pontifícia Universidade Católica do Paraná - Engenharia de Software - Andrey Ribeiro</p>
+  </footer>
+
+</body>
+</html>

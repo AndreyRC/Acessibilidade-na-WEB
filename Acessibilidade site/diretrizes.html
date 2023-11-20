@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diretrizes e Padrões de Acessibilidade</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    nav {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 0.5em 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1em;
+    }
+
+    main {
+      padding: 2em;
+      margin-bottom: 2em;
+    }
+
+    section {
+      margin-bottom: 2em;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .font-controls {
+      text-align: right;
+      margin-bottom: 1em;
+    }
+
+    .font-controls button {
+      font-size: 1em;
+      margin-left: 0.5em;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 0.5em;
+      border-radius: 4px;
+    }
+
+    .footer-text {
+      font-size: 1em;
+      transition: font-size 0.3s;
+    }
+    nav a.pagina-atual {
+      background-color: #4CAF50; 
+      color: #fff;
+      padding: 0.5em 1em;
+      border-radius: 4px;
+    }
+  </style>
+  <script>
+
+    let tamanhoFontePadrao = 1;
+
+    function aumentarFonte() {
+      if (tamanhoFontePadrao < 3) {
+        tamanhoFontePadrao += 0.2;
+        document.body.style.fontSize = tamanhoFontePadrao + "em";
+        document.querySelector('.footer-text').style.fontSize = '1em';
+      }
+    }
+
+    function diminuirFonte() {
+      if (tamanhoFontePadrao > 1) {
+        tamanhoFontePadrao -= 0.2;
+        document.body.style.fontSize = tamanhoFontePadrao + "em";
+        document.querySelector('.footer-text').style.fontSize = '1em';
+      }
+    }
+
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Diretrizes e Padrões de Acessibilidade</h1>
+    <p>Entendendo e implementando boas práticas para criar um ambiente online acessível para todos.</p>
+  </header>
+
+  <nav>
+    <a href="historias.html">Histórias Inspiradoras</a>
+    <a href="index.html">Página Inicial</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="diretrizes.html"class="pagina-atual">Diretrizes</a>
+    <a href="glossario.html">Glossário de Termos</a>
+  </nav>
+
+  <main>
+
+    <div class="font-controls">
+      <button onclick="aumentarFonte()">Aumentar Fonte</button>
+      <button onclick="diminuirFonte()">Diminuir Fonte</button>
+    </div>
+
+    <section>
+      <h1>Diretrizes de Acessibilidade na Web: Promovendo uma Experiência Inclusiva</h1>
+
+      <p>A acessibilidade na web é um princípio fundamental que visa garantir que todas as pessoas, independentemente de suas habilidades ou limitações, possam interagir e usufruir dos recursos disponíveis online. Diretrizes de acessibilidade são conjuntos de recomendações e padrões desenvolvidos para criar um ambiente virtual inclusivo e acessível a todos os usuários. Estas diretrizes têm como objetivo eliminar barreiras, proporcionando uma experiência igualitária a pessoas com diferentes capacidades, incluindo aquelas com deficiências visuais, auditivas, motoras ou cognitivas.</p>
+    
+      <h2>Web Content Accessibility Guidelines (WCAG)</h2>
+      <p>As WCAG são a referência central para diretrizes de acessibilidade na web. Desenvolvidas pelo World Wide Web Consortium (W3C), essas diretrizes definem padrões técnicos, organizacionais e de design para tornar o conteúdo web mais acessível. Elas abrangem diversos princípios, como percebibilidade, operabilidade, compreensibilidade e robustez.</p>
+    
+      <h2>Percebilidade</h2>
+      <p>Conteúdo web deve ser apresentado de maneira clara e perceptível. Isso inclui o uso adequado de alternativas textuais para imagens, legendas em vídeos, contraste de cores suficiente e estrutura de página lógica.</p>
+    
+      <h2>Operabilidade</h2>
+      <p>Usuários devem ser capazes de interagir com o conteúdo de maneira fácil e eficaz. Isso abrange a navegação por teclado, tempo suficiente para a leitura do conteúdo, evitando conteúdos que possam causar convulsões ou problemas de foco, entre outros aspectos.</p>
+    
+      <h2>Compreensibilidade</h2>
+      <p>O conteúdo e a operação do site devem ser compreensíveis. Isso envolve o uso consistente de linguagem e navegação intuitiva, além de oferecer formas de corrigir e evitar erros.</p>
+    
+      <h2>Robustez</h2>
+      <p>Garantir que o conteúdo seja interpretado de maneira confiável por uma variedade de agentes de usuário, incluindo tecnologias assistivas. Isso significa seguir padrões e práticas de codificação que garantam a compatibilidade com diferentes navegadores e tecnologias.</p>
+    
+      <h2>Tecnologias Assistivas</h2>
+      <p>Além das diretrizes, é crucial considerar o suporte a tecnologias assistivas, como leitores de tela, teclados virtuais, controles por voz e outras ferramentas que capacitam usuários com deficiências.</p>
+    
+      <p>Ao adotar e implementar essas diretrizes, desenvolvedores, designers e proprietários de sites contribuem para a criação de um ambiente virtual inclusivo, garantindo que todos os usuários possam desfrutar de uma experiência completa na web. A busca contínua pela conformidade com as diretrizes de acessibilidade é essencial para promover uma internet verdadeiramente acessível, onde a diversidade de habilidades é reconhecida e respeitada.</p>
+    
+    </section>
+  </main>
+
+  <footer>
+    <p>PUCPR - Pontifícia Universidade Católica do Paraná - Engenharia de Software - Andrey Ribeiro</p>
+  </footer>
+
+</body>
+</html>

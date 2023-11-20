@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos de Acessibilidade</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    nav {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 0.5em 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1em;
+    }
+
+    main {
+      padding: 2em;
+    }
+
+    section {
+      margin-bottom: 2em;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .visual-impaired-image {
+      width: 1000px;
+      height: 600px;
+      display: block;
+      margin: 1em auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .font-controls {
+      text-align: right;
+      margin-bottom: 1em;
+    }
+
+    .font-controls button {
+      font-size: 1em;
+      margin-left: 0.5em;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 0.5em;
+      border-radius: 4px;
+    }
+
+    .footer-text {
+      font-size: 1em;
+      transition: font-size 0.3s;
+    }
+    nav a.pagina-atual {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 0.5em 1em;
+      border-radius: 4px;
+    }
+  </style>
+  <script>
+    let tamanhoFontePadrao = 1;
+
+    function aumentarFonte() {
+      if (tamanhoFontePadrao < 3) {
+        tamanhoFontePadrao += 0.2;
+        document.body.style.fontSize = tamanhoFontePadrao + "em";
+        document.querySelector('.footer-text').style.fontSize = '1em';
+      }
+    }
+
+    function diminuirFonte() {
+      if (tamanhoFontePadrao > 1) {
+        tamanhoFontePadrao -= 0.2;
+        document.body.style.fontSize = tamanhoFontePadrao + "em";
+        document.querySelector('.footer-text').style.fontSize = '1em';
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Recursos de Acessibilidade</h1>
+    <p>Informações detalhadas sobre tecnologias e ferramentas de assistência.</p>
+  </header>
+
+  <nav>
+
+    <a href="historias.html">Histórias Inspiradoras</a>
+    <a href="index.html">Página Inicial</a>
+    <a href="recursos.html"class="pagina-atual">Recursos</a>
+    <a href="diretrizes.html">Diretrizes</a>
+    <a href="glossario.html">Glossário de Termos</a>
+
+  </nav>
+
+  <main>
+
+    <div class="font-controls">
+      <button onclick="aumentarFonte()">Aumentar Fonte</button>
+      <button onclick="diminuirFonte()">Diminuir Fonte</button>
+    </div>
+
+
+    <section>
+      <h1>Tecnologias de Assistência na Web: Promovendo Acessibilidade e Inclusão</h1>
+      <p>A acessibilidade na web é um princípio fundamental que visa garantir que todas as pessoas, independentemente de suas habilidades ou limitações, possam interagir e utilizar os recursos disponíveis online. As Tecnologias de Assistência desempenham um papel crucial nesse contexto, proporcionando suporte e facilitando a experiência de navegação para aqueles com deficiências visuais, auditivas, motoras ou cognitivas. Este texto explorará algumas dessas tecnologias e como elas contribuem para tornar a web mais inclusiva.</p>
+      <h2>Leitores de Tela:</h2>
+      <img src="pessoa com dificuldades visuais celular.webp" alt="Imagem de uma pessoa com dificuldades visuais mexendo no celular." class="visual-impaired-image">
+      <p>Os leitores de tela são ferramentas vitais para usuários com deficiência visual. Eles convertem texto digital em fala ou em Braille, permitindo que pessoas cegas ou com baixa visão acessem informações presentes em sites, aplicativos e documentos. Exemplos notáveis incluem o JAWS (Job Access With Speech) e o NVDA (NonVisual Desktop Access).</p>
+      <h2>Contraste de Cores:</h2>
+      <p>Problemas de visão, como a baixa visão ou a sensibilidade à luz, podem ser mitigados através do ajuste do contraste de cores. Tecnologias que permitem a personalização dos esquemas de cores, como inversão de cores e ajuste de brilho, beneficiam diretamente usuários com necessidades específicas de contraste.</p>
+      <h2>Legendas e Intérpretes de Libras:</h2>
+      <img src="interprete de libras virtual.jpg" alt="Imagem de um interprete de libras virtual do aplicativo HandTalk.">
+      <p>Para pessoas surdas ou com deficiência auditiva, legendas em vídeos e interpretação em Língua Brasileira de Sinais (Libras) são cruciais. Ferramentas de autoria de vídeos e plataformas de transmissão ao vivo oferecem recursos para incluir legendas automáticas, enquanto intérpretes de Libras online também estão se tornando mais comuns.</p>
+      <h2>Teclados Virtuais e Controles por Voz:</h2>
+      <img src="passoa com dificuldades motoras e teclado personalizado.jpg" alt="Imagem de pessoa com problemas motores aprendendo a usar teclado personalizado.">
+      <p>Usuários com limitações motoras podem encontrar desafios ao usar teclados físicos. Teclados virtuais e tecnologias de controle por voz, como o reconhecimento de fala, proporcionam alternativas acessíveis e eficazes. Essas tecnologias beneficiam não apenas pessoas com deficiências motoras, mas também aquelas que têm dificuldades em digitar devido a condições como a dislexia.</p>
+      <h2>Ferramentas de Navegação Simplificada:</h2>
+      <p>Para usuários com deficiências cognitivas ou dificuldades de aprendizado, ferramentas que simplificam a navegação e organização de conteúdo são valiosas. Isso inclui a utilização de menus intuitivos, estrutura clara de páginas e opções de leitura simplificada.</p>
+      <h2>Conclusão:</h2>
+      <p>As Tecnologias de Assistência na web desempenham um papel essencial na promoção da inclusão digital. Ao incorporar essas tecnologias em sites, aplicativos e plataformas online, é possível criar um ambiente virtual acessível a todos. A busca contínua por inovações e a conscientização sobre a importância da acessibilidade são fundamentais para garantir que a web seja verdadeiramente um espaço inclusivo, onde cada usuário possa desfrutar de uma experiência completa, independente de suas habilidades ou limitações.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>PUCPR - Pontifícia Universidade Católica do Paraná - Engenharia de Software - Andrey Ribeiro</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histórias Inspiradoras - Bem-Vindo à Acessibilidade</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    nav {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 0.5em 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1em;
+    }
+
+    main {
+      padding: 2em;
+      margin-bottom: 2em;
+    }
+
+    section {
+      margin-bottom: 2em;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .font-controls {
+      text-align: right;
+      margin-bottom: 1em;
+    }
+
+    .font-controls button {
+      font-size: 1em;
+      margin-left: 0.5em;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 0.5em;
+      border-radius: 4px;
+    }
+
+    .footer-text {
+      font-size: 1em;
+      transition: font-size 0.3s;
+    }
+
+
+    nav a.pagina-atual {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 0.5em 1em;
+      border-radius: 4px;
+    }
+    div.ficticio {
+      width: 100%;
+      background-color: #4CAF50;
+      color: #fff;
+      padding-left: 31%;
+    }
+  </style>
+ <script>
+  let tamanhoFontePadrao = 1;
+
+  function aumentarFonte() {
+    if (tamanhoFontePadrao < 3) {
+      tamanhoFontePadrao += 0.2;
+      document.body.style.fontSize = tamanhoFontePadrao + "em";
+      document.querySelector('.footer-text').style.fontSize = '1em';
+    }
+  }
+
+  function diminuirFonte() {
+    if (tamanhoFontePadrao > 1) {
+      tamanhoFontePadrao -= 0.2;
+      document.body.style.fontSize = tamanhoFontePadrao + "em";
+      document.querySelector('.footer-text').style.fontSize = '1em';
+    }
+  }
+</script>
+</head>
+<body>
+  
+
+
+  <header>
+    <h1>Histórias de Superação na Tecnologia</h1>
+  </header>
+  <nav>
+    <a href="historias.html"class="pagina-atual">Histórias Inspiradoras</a>
+    <a href="index.html">Página Inicial</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="diretrizes.html">Diretrizes</a>
+    <a href="glossario.html">Glossário de Termos</a>
+    
+
+  </nav>
+  
+  <div class="ficticio">
+    <p>Todas estas histórias são fictícias e inspiradas na determinação de superar desafios na tecnologia.</p>
+  </div>
+
+  <main>
+    <div class="font-controls">
+      <button onclick="aumentarFonte()">Aumentar Fonte</button>
+      <button onclick="diminuirFonte()">Diminuir Fonte</button>
+    </div>
+    
+    <section>
+      <h2>A Jornada de Lucas: Desenvolvendo Tecnologia Inclusiva</h2>
+      <p>Lucas, um visionário desenvolvedor, encarou o desafio de criar uma solução inovadora para melhorar a acessibilidade de pessoas com deficiência visual. Inspirado por sua avó, que enfrentava a cegueira, Lucas mergulhou de cabeça no desenvolvimento de um aplicativo de leitura por voz. Sua abordagem colaborativa com usuários portadores de deficiência visual garantiu uma interface intuitiva e eficaz. O aplicativo não apenas transformou a vida de sua avó, permitindo-a "ouvir" livros e artigos online, mas também se tornou uma ferramenta valiosa para a comunidade global de deficientes visuais.</p>
+    </section>
+
+    <section>
+      <h2>A Revolução de Sofia: Uma Experiência de Realidade Virtual Acessível</h2>
+      <p>Sofia, uma apaixonada por jogos, viu sua vida tomar um rumo extraordinário após um acidente que resultou em paraplegia. Determinada a continuar aproveitando os jogos, ela se lançou na missão de criar uma plataforma de realidade virtual (VR) acessível para pessoas com diferentes níveis de mobilidade. Com ambientes virtuais inclusivos e controles adaptáveis, Sofia não apenas superou as limitações físicas, mas também proporcionou a outros com mobilidade reduzida uma experiência envolvente e igualitária no mundo dos jogos em VR.</p>
+    </section>
+
+    <section>
+      <h2>A Inovação de Carlos: Aplicando IA na Comunicação Não-Verbal</h2>
+      <p>Carlos, um brilhante engenheiro de software surdo, lançou-se na criação de uma inovadora aplicação que utiliza inteligência artificial para traduzir a linguagem de sinais em tempo real. Seu desejo era facilitar uma comunicação mais eficaz para a comunidade surda. O aplicativo não apenas traduz gestos em texto e voz, mas também aprende continuamente, adaptando-se às nuances individuais da linguagem de sinais. Carlos, além de superar desafios técnicos, tornou-se um fervoroso defensor da integração de tecnologias acessíveis em diversos setores, promovendo uma comunicação mais inclusiva para pessoas surdas em todo o mundo.</p>
+    </section>
+  </main>
+
+
+
+  <footer>
+    <p>PUCPR - Pontifícia Universidade Católica do Paraná - Engenharia de Software - Andrey Ribeiro</p>
+  </footer>
+
+</body>
+</html>
